@@ -42,7 +42,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
-
+		
 		if (preKeys[DIK_SPACE] == 0 && keys[DIK_SPACE] != 0) {
 			pos = { 160,960 };
 			pos2 = { 320,960 };
@@ -63,8 +63,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		velocity += (acceleration / 60.0f);
 		velocity2 += (acceleration2 / 60.0f);
 
-		pos += velocity ;
-		pos2 += velocity2 ;
+		pos += (velocity / 60.0f);
+		pos2 += (velocity2 / 60.0f);
 
 		screen.Update();
 		///
